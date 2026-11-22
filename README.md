@@ -1,5 +1,6 @@
 # Chrome 翻译一键修复工具
 
+本工具由AI建造
 谷歌关闭中国大陆的谷歌翻译服务后，Chrome 内置翻译依赖的 `translate.googleapis.com` 无法直接访问。
 本工具通过修改 `hosts`，把相关域名指向**实测可用**的 Google 前端 IP，并在 IP 失效时自动扫描新的可用 IP。
 
@@ -59,11 +60,6 @@ sudo python3 gtfix.py --fix     # macOS / Linux
 - Actions 运行在境外，可能连不上只有境内网络才能到达的 IP：这类“无法验证”的 IP 仅当提交者是仓库 OWNER / MEMBER / COLLABORATOR 时才收录。
 - jsDelivr 对分支内容有缓存（最长约 12 小时），新收录的 IP 可能稍后才对所有人可见；客户端会回退到 GitHub raw。
 
-**仓库维护者需要做的**：
-1. 开启仓库的 Issues。
-2. Settings → Actions → General → Workflow permissions 选择 **Read and write permissions**。
-3. 打包前在 `gtfix.py` 顶部手动设置 `SHARED_REPO = "用户名/仓库名"`（或运行时加 `--shared-repo`）。
-4. `ips.txt` 里的初始条目只是种子，可以自己用 `--export` 导出后更新。
 
 ## 自己打包 exe
 - 本机：安装 Python 后双击 `build_exe.bat`
