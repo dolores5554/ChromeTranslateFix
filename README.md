@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/35232022/README.md)
 # Chrome 翻译一键修复工具
 
 谷歌关闭中国大陆的谷歌翻译服务后，Chrome 内置翻译依赖的 `translate.googleapis.com` 无法直接访问。
